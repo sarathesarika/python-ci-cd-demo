@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                bat 'pip install pytest'
+                bat 'pip install pytest playwright'
+                bat 'python -m playwright install'
             }
         }
         stage('Test') {
