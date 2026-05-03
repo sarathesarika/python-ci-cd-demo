@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh 'pip install pytest'
+                bat 'pip install pytest'
             }
         }
         stage('Test') {
             steps {
-                sh 'pytest test_login.py -v'
+                bat 'pytest test_firstprogram.py -v'
             }
         }
     }
